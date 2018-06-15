@@ -1,4 +1,4 @@
-This is flast boilerplate
+This is flask boilerplate
 
 ## Installation:
 
