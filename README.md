@@ -2,13 +2,29 @@ This is flast boilerplate
 
 ## Installation:
 
+1. clone repository and initialize
+
 ```bash
-make 
-make start
+$ git clone https://github.com/kazuakiishiguro/flask_boilerplate.git
+$ cd flask_boilerplate
+$ make 
+```
+
+2. activate a virtualenv
+
+```bash
+$ virtualenv -p python3.6 .venv
+$ source .venv/bin/activate
+```
+
+1. Start app
+
+```bash
+$ make start
 ```
 
 ## Test
 
 ```bash
-make test
+$ make test
 ```
