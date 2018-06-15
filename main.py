@@ -6,7 +6,9 @@ import argparse
 
 from flask import Flask, jsonify
 from flask_cors import CORS
-from logzero import logger
+from logging import getLogger
+logger = getLogger(__name__)
+
 
 def create_app(config=None):
     app = Flask(__name__)
@@ -23,12 +25,12 @@ def create_app(config=None):
     # Flask Blueprints: http://flask.pocoo.org/docs/latest/blueprints
     @app.route("/")
     def hello_world():
-        logger.info("/")
+        logger.debug(__name__)
         return "Hello World"
     
     @app.route("/foo/<someId>")
     def foo_url_arg(someId):
-        logger.info("/foo/%s", someId)
+        logger.debug(__name__)
         return jsonify({"echo": someId})
     
     return app
