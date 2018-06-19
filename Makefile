@@ -1,7 +1,13 @@
-.PHONY: start test clean clean-build clean-pyc
+.PHONY: help start test clean clean-build clean-pyc 
 
 init:
 	@python setup.py install
+
+help:
+	@echo "start - starts the root chain"
+	@echo "test - starts the child chain"
+	@echo "clean-build - remove build artifacts"
+	@echo "clean-pyc - remove Python file artifacts"
 
 start:
 	@python main.py
