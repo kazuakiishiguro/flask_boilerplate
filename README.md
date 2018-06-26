@@ -17,7 +17,7 @@ $ virtualenv -p python3.6 .venv
 $ source .venv/bin/activate
 ```
 
-1. Start app
+3. Start app
 
 ```bash
 $ make start
