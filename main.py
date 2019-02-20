@@ -4,7 +4,7 @@
 import os
 import argparse
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from flask_cors import CORS
 from logging import getLogger
 logger = getLogger(__name__)
@@ -25,8 +25,9 @@ def create_app(config=None):
     # Flask Blueprints: http://flask.pocoo.org/docs/latest/blueprints
     @app.route("/")
     def hello_world():
+        name = "John Doe"
         logger.debug(__name__)
-        return "Hello World"
+        return render_template('hello.html', title='index', name=name)
     
     @app.route("/foo/<someId>")
     def foo_url_arg(someId):
